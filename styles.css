@@ -1,15 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans&family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Roboto;
   outline: none;
   border: none;
 }
 body {
   background: #181818;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8% 0 9%;
+  gap: 20px;
 }
 
 .flex-container {
@@ -18,12 +23,12 @@ body {
 }
 
 nav {
+  display: flex;
   width: 100%;
   height: 15%;
-  position: static;
-  top: 0;
+  position: relative;
   background-color: #212121;
-  padding: 5px 5%;
+  padding: 5px 8%;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
@@ -35,16 +40,15 @@ nav i {
   cursor: pointer;
 }
 .nav-left img {
-  width: 90px;
+  width: 120px;
   cursor: pointer;
-  margin-left: 20px;
-  position: relative;
+  padding-left: 20px;
 }
 .search-box input {
   display: flex;
   height: 40px;
   width: 400px;
-  padding: 15px;
+  padding: 10px;
   font-size: 14px;
   color: #fff;
   background-color: #121212;
@@ -60,7 +64,6 @@ nav i {
 .search-btn i {
   color: #fff;
   font-size: 20px;
-  padding: auto;
 }
 .mic {
   height: 40px;
@@ -73,17 +76,112 @@ nav i {
 .mic i {
   font-size: 15px;
 }
-.nav-right {
-  margin-right: 0;
-}
 
 .nav-right i {
   margin-right: 20px;
 }
 
 .profile-pic {
-  width: 45px;
+  width: 40px;
   margin-left: 20px;
   border: 1px solid #fff;
   border-radius: 50%;
+}
+
+/*---------------- Video section ----------------*/
+
+.video-section {
+  flex-basis: 60%;
+  flex-wrap: wrap;
+  margin: 25px 0 80px 0;
+}
+
+.video-details h1,
+h3 {
+  color: #fff;
+}
+h1 {
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 15px;
+}
+h3 {
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+.author img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.author h4 {
+  font-size: 14px;
+  color: #fff;
+}
+.author span {
+  color: #707070;
+  top: 1px;
+  font-size: 12px;
+  margin-right: 50px;
+}
+.btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.btn-join {
+  border: 1px solid #3da6ff;
+  color: #3da6ff;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.description {
+  width: 45%;
+}
+.description p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* ------------------sidebar---------------- */
+
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+  margin-top: 20px;
+}
+hr {
+  border: 0.2px solid #303030;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.suggested-videos {
+  display: flex;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.suggested-videos img {
+  margin-right: 12px;
+}
+.suggested-videos a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.suggested-videos p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #aaaaaa;
 }
